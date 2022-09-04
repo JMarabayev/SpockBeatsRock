@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Lizard Spock</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Spock Beats Rock!</h1>
@@ -12,7 +13,8 @@
     <div>
         <h2>Rules</h2>
         <p>This game is a spin on the classic game of Rock Paper Scissors, whoich adds two more choices to the player.<br>The rules are simple:<br>
-        <ul>
+            <img src="/assets/images/FpfGHc7.jpg" alt="graphic describing the rules of the rock paper scissors lizard spock game">
+            <ul>
             <li> Rock crushes Scissors</li>
             <li> Scissors cut Paper</li>
             <li> Paper covers Rock</li>
@@ -26,12 +28,14 @@
             <li>Scissors decapitate Lizard</li>
         </ul>
     </p>
-    <img src="/assets/images/FpfGHc7.jpg" alt="graphic describing the rules of the rock paper scissors lizard spock game">
     </div>
-    <div>
-        <h2>Choose your Username!</h2>
-        <input type="text" name="username" id="playername" placeholder="Type Username here!">
-        <input type="submit" value="PLAY!">
-    </div>
+<div class="username">
+    <form>
+        <input type="text" name="username" id="username" placeholder="Type Username here!"/>
+        <a href="/game.html">
+            <input type="submit" value="PLAY!"/>
+        </a>
+    </form>
+</div>
 </body>
 </html>
