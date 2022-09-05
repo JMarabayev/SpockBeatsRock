@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Beats Spock!</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Spock Beats Rock!</title>
+    <link rel="stylesheet" href="/assets/game.css">
+    <script src="/script.js"></script>
 </head>
 <body>
     <div id="scoreboard">
-        <div id="playerlabel"></div>
-        <div id="complabel">Spock Bot</div>
-        <span id="playerscore">0</span>vs<span id="compscore">0</span>
+        <div id="playerlabel" class="label">Username</div>
+        <div id="complabel" class="label">Spock Bot</div>
+        <span id="playerscore">0</span>:<span id="compscore">0</span>
     </div>
     <div id="result">
     </div>
+    <p id="resultstatement">Spock Beats Rock!</p>
     <div class="choices">
         <div id="rock" class="option"></div>
         <img src="/assets/images/rock.jpg" alt="rock icon">
@@ -27,5 +29,6 @@
         <div id="spock"class="option"></div>
         <img src="/assets/images/spock.jpg" alt="spockicon">
     </div>
+    <p id="prompt">Make Your Choice!</p>
 </body>
 </html>
