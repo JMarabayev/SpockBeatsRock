@@ -4,7 +4,7 @@ var computerScore = 0;
 const playerScoreDisplay = document.getElementById("playerscore");
 const computerScoreDisplay = document.getElementById("compscore");
 const scoreboardDisplay = document.querySelector(".scoreboard");
-const resultDisplay = document.querySelector("resultstatement");
+const resultDisplay = document.getElementById("result");
 
 //DOM variables for player choices
 const rockChoice = document.getElementById("rock");
@@ -17,22 +17,22 @@ const spockChoice = document.getElementById("spock");
 function win(playerChoice,computerChoice){
     playerScore++;
     playerScoreDisplay.innerHTML = playerScore;
-    resultDisplay.innerHTML= `${playerChoice} beats ${computerChoice}! You win!`
+    resultDisplay.innerHTML= `You win!`
 }
 function lose(playerChoice,computerChoice){
     computerScore++;
     computerScoreDisplay.innerHTML = computerScore;
-    resultDisplay.innerHTML= `${playerChoice} loses to ${computerChoice}! You lose!`
+    resultDisplay.innerHTML= `You lose!`
 }
 function tie(playerChoice,computerChoice){
-    resultDisplay.innerHTML= `${playerChoice} = ${computerChoice}! its a Tie!`
+    resultDisplay.innerHTML= `its a Tie!`
     
 }
 
 
 //defining the function for the game in which outcomes are explored
 function game(playerChoice){
-    const computerChoice = getcomputerChoice;
+    const computerChoice = getcomputerChoice();
     switch (playerChoice + computerChoice){
         case "rockscissors":
         case "rocklizard":
@@ -76,7 +76,7 @@ function getcomputerChoice(){
 
 function main(){
     rockChoice.addEventListener('click', function(){
-        game("rock");
+       game("rock");
     });
     paperChoice.addEventListener('click', function(){
         game("paper");
@@ -94,3 +94,4 @@ function main(){
 main();
 getcomputerChoice();
 console.log(getcomputerChoice());
+
