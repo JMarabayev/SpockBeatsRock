@@ -13,6 +13,7 @@ const scissorsChoice = document.getElementById("scissors");
 const lizardChoice = document.getElementById("lizard");
 const spockChoice = document.getElementById("spock");
 
+
 //score update
 function win(playerChoice,computerChoice){
     playerScore++;
@@ -71,7 +72,7 @@ function game(playerChoice){
 //defining the rng computer choice
 function getcomputerChoice(){
     const options = ["rock","paper","scissors","lizard","spock"];
-    const rng= (Math.floor(Math.random()*4));
+    const rng= (Math.floor(Math.random()*5));
     return options[rng];
 }
 
@@ -99,9 +100,14 @@ function textTransform(word){
     if (word === "scissors") return "Scissors";
     if (word === "lizard") return "Lizard";
     if (word === "spock") return "Spock";
-    
+};
+
+function showRules() {
+   var element = document.getElementById("rulesPic");
+   element.classList.toggle("hidden");
 }
+
 main();
-getcomputerChoice();
-console.log(getcomputerChoice());
+
+
 
