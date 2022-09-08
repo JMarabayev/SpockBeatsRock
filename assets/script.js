@@ -5,6 +5,7 @@ const playerScoreDisplay = document.getElementById("playerscore");
 const computerScoreDisplay = document.getElementById("compscore");
 const scoreboardDisplay = document.querySelector(".scoreboard");
 const resultDisplay = document.getElementById("result");
+let moves = 0
 
 //DOM variables for player choices
 const rockChoice = document.getElementById("rock");
@@ -12,6 +13,11 @@ const paperChoice = document.getElementById("paper");
 const scissorsChoice = document.getElementById("scissors");
 const lizardChoice = document.getElementById("lizard");
 const spockChoice = document.getElementById("spock");
+const movesLeft= document.querySelector("movesLeft")
+
+//moves left 
+movesLeft=10-moves
+
 
 
 //score update
@@ -80,18 +86,24 @@ function getcomputerChoice(){
 function main(){
     rockChoice.addEventListener('click', function(){
        game("rock");
+                moves++;
     });
     paperChoice.addEventListener('click', function(){
         game("paper");
+                moves++;
     });
     scissorsChoice.addEventListener('click', function(){
         game("scissors");
+                moves++;
     });
     lizardChoice.addEventListener('click', function(){
         game("lizard");
+                moves++;
     });
     spockChoice.addEventListener('click', function(){
         game("spock");
+                moves++;
+                movesLeft.innerText = (10-moves);
     });
 }
 function textTransform(word){
