@@ -17,15 +17,16 @@ const spockChoice = document.getElementById("spock");
 function win(playerChoice,computerChoice){
     playerScore++;
     playerScoreDisplay.innerHTML = playerScore;
-    resultDisplay.innerHTML= `You win!`
+    resultDisplay.innerHTML= `${textTransform(playerChoice)} beats ${textTransform(computerChoice)} You Win!`
+    
 }
 function lose(playerChoice,computerChoice){
     computerScore++;
     computerScoreDisplay.innerHTML = computerScore;
-    resultDisplay.innerHTML= `You lose!`
+    resultDisplay.innerHTML= `${textTransform(playerChoice)} loses to ${textTransform(computerChoice)} You Lose!`
 }
 function tie(playerChoice,computerChoice){
-    resultDisplay.innerHTML= `its a Tie!`
+    resultDisplay.innerHTML= `${textTransform(playerChoice)} is the same as ${textTransform(computerChoice)} Its a Tie!`
     
 }
 
@@ -67,6 +68,7 @@ function game(playerChoice){
         break;    
 }
 }
+//defining the rng computer choice
 function getcomputerChoice(){
     const options = ["rock","paper","scissors","lizard","spock"];
     const rng= (Math.floor(Math.random()*4));
@@ -90,6 +92,14 @@ function main(){
     spockChoice.addEventListener('click', function(){
         game("spock");
     });
+}
+function textTransform(word){
+    if (word === "rock") return "Rock";
+    if (word === "paper") return "Paper";
+    if (word === "scissors") return "Scissors";
+    if (word === "lizard") return "Lizard";
+    if (word === "spock") return "Spock";
+    
 }
 main();
 getcomputerChoice();

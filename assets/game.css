@@ -37,7 +37,7 @@ body{
 
 .option{
   display: inline-block;
-
+  padding-top: 20px;
 }
 img{
   height: 100px;
@@ -51,7 +51,15 @@ img:hover{
   font-size: 60px;
   font-weight: 200;
 }
-#resultstatement{
-  font-size: 100px;
+#welcometatement{
+  font-size: 40px;
   font-weight: 300;
+}
+#result{
+  font-size: 40px;
+  font-weight: 300;
+  width: 100%;
+}
+.hidden{
+  visibility: hidden;
 }
