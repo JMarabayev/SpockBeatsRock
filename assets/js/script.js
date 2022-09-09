@@ -6,7 +6,7 @@ const computerScoreDisplay = document.getElementById("compscore");
 const scoreboardDisplay = document.querySelector(".scoreboard");
 const resultDisplay = document.getElementById("result");
 let moves = 0
-
+const pattern = []
 //DOM variables for player choices
 const rockChoice = document.getElementById("rock");
 const paperChoice = document.getElementById("paper");
@@ -155,24 +155,32 @@ function getcomputerChoice(){
 function main(){
     rockChoice.addEventListener('click', function(){
        game("rock");
+       pattern.push("1");
+       console.log(pattern);
     });
     paperChoice.addEventListener('click', function(){
         game("paper");
-
+        pattern.push("2");
+        console.log(pattern);
     });
     scissorsChoice.addEventListener('click', function(){
         game("scissors");
-
+        pattern.push("3"); 
+        console.log(pattern);
     });
     lizardChoice.addEventListener('click', function(){
         game("lizard");
-
+        pattern.push("4");
+        console.log(pattern);
     });
     spockChoice.addEventListener('click', function(){
-
-
+        game("spock")
+        pattern.push("5");
+        console.log(pattern);
     });
-}
+};
+
+
 //Function to return the words in a more readable format
 function textTransform(word){
     if (word === "rock") return "Rock";
