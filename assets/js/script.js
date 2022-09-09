@@ -179,6 +179,22 @@ function main(){
         console.log(pattern);
     });
 };
+//pattern recognition
+function hasConsecutive(patern, amount) {
+    var last = null;
+    var count = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] != last) {
+            last = arr[i];
+            count = 0;
+        }
+        count += 1;
+        if (amount <= count) {
+            return true;
+        }
+    }
+    return false;
+}
 
 
 //Function to return the words in a more readable format
