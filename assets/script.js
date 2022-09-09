@@ -13,12 +13,81 @@ const paperChoice = document.getElementById("paper");
 const scissorsChoice = document.getElementById("scissors");
 const lizardChoice = document.getElementById("lizard");
 const spockChoice = document.getElementById("spock");
-const movesLeft= document.querySelector("movesLeft")
+const movesLeft= document.getElementById("movesLeft")
+const moves_div = document.getElementById("moves")
+const rules_div = document.getElementById("rules_g")
+const prompt = document.getElementById("prompt")
+const finalDisplay = document.getElementById("final_result")
+const rules_button = document.getElementById("rules_btn")
+const reloadBtn = document.getElementById("reload_btn")
+//game over function
+
+function gameOver(){
+   rockChoice.style.display ="none";
+   paperChoice.style.display ="none";
+   scissorsChoice.style.display ="none";
+   lizardChoice.style.display ="none";
+   spockChoice.style.display ="none";
+   moves_div.style.display ="none";
+   rules_div.style.display ="none";
+   resultDisplay.style.display="none";
+   rules_button.style.display ="none"
+   prompt.innerHTML = "Game Over!"
+   reloadBtn.innerText = 'Restart';//taken from https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/
+        reloadBtn.style.display = 'inline-block'
+        reloadBtn.addEventListener('click',() => {
+            window.location.reload();
+        });
+    if(playerScore>computerScore){
+        console.log("win")
+        prompt.innerHTML = "Congratulations! You have Defeated the Spock Bot!"
+    }
+    else if(computerScore>playerScore){
+        console.log("lose")
+        prompt.innerHTML = "Spock Bot reigns Supreme! Better luck next time!"
+    }
+    else{
+        console.log("draw")
+        prompt.innerHTML = "You and Spock Bot are on the same level! Spock Bot wants a rematch!"
+    }
+}
 
 //moves left 
-movesLeft=10-moves
-
-
+rockChoice.onclick = function(){
+    moves++;
+    movesLeft.innerText=10-moves;
+    if (moves==10){
+        gameOver();
+    }
+}
+paperChoice.onclick = function(){
+    moves++;
+    movesLeft.innerText=10-moves;
+    if (moves==10){
+        gameOver();
+    }
+}
+scissorsChoice.onclick = function(){
+    moves++;
+    movesLeft.innerText=10-moves;
+    if (moves==10){
+        gameOver();
+    }
+}
+lizardChoice.onclick = function(){
+    moves++;
+    movesLeft.innerText=10-moves;
+    if (moves==10){
+        gameOver();
+    }
+}
+spockChoice.onclick = function(){
+    moves++;
+    movesLeft.innerText=10-moves;
+    if (moves==10){
+        gameOver();
+    }
+}
 
 //score update
 function win(playerChoice,computerChoice){
@@ -86,24 +155,22 @@ function getcomputerChoice(){
 function main(){
     rockChoice.addEventListener('click', function(){
        game("rock");
-                moves++;
     });
     paperChoice.addEventListener('click', function(){
         game("paper");
-                moves++;
+
     });
     scissorsChoice.addEventListener('click', function(){
         game("scissors");
-                moves++;
+
     });
     lizardChoice.addEventListener('click', function(){
         game("lizard");
-                moves++;
+
     });
     spockChoice.addEventListener('click', function(){
-        game("spock");
-                moves++;
-                movesLeft.innerText = (10-moves);
+
+
     });
 }
 function textTransform(word){

@@ -88,3 +88,6 @@ button:active{
 transform: translateY(4px);
 box-shadow: 0 4px rgb(0, 0, 4);
 }
+#reload_btn{
+  display: none;
+}
