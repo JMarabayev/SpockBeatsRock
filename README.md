@@ -102,7 +102,7 @@ In this section, you should go over the different parts of your project, and des
 - HTML
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjmarabayev.github.io%2Fintrodebatum%2F)
 - CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjmarabayev.github.io%2Fintrodebatum%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+  - No errors were found when passing through the official [(Jigsaw) validator] (https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjmarabayev.github.io%2FSpockBeatsRock%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - Lighthouse Report 
     - Lighthouse report gave an overall good score except for performance, which may be due to high resolution images being used for the website.
     ![Lighthouse report](/assets/images/lighthouse.png)
