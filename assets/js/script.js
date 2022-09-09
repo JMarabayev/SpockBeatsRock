@@ -187,6 +187,9 @@ function showRules() {
    element.classList.toggle("hidden");
 }
 
+
+
+
 main();
 
 
