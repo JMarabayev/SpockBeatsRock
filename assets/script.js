@@ -20,8 +20,7 @@ const prompt = document.getElementById("prompt")
 const finalDisplay = document.getElementById("final_result")
 const rules_button = document.getElementById("rules_btn")
 const reloadBtn = document.getElementById("reload_btn")
-//game over function
-
+//game over function which hides all the irrelevant elements
 function gameOver(){
    rockChoice.style.display ="none";
    paperChoice.style.display ="none";
@@ -38,6 +37,7 @@ function gameOver(){
         reloadBtn.addEventListener('click',() => {
             window.location.reload();
         });
+        // deciding statement on who won the best out of 10 moves
     if(playerScore>computerScore){
         console.log("win")
         prompt.innerHTML = "Congratulations! You have Defeated the Spock Bot!"
@@ -89,7 +89,7 @@ spockChoice.onclick = function(){
     }
 }
 
-//score update
+//score update and resulting statement from a combination of variables
 function win(playerChoice,computerChoice){
     playerScore++;
     playerScoreDisplay.innerHTML = playerScore;
@@ -151,7 +151,7 @@ function getcomputerChoice(){
     return options[rng];
 }
 
-
+//on click for choices to be put into the game
 function main(){
     rockChoice.addEventListener('click', function(){
        game("rock");
@@ -173,6 +173,7 @@ function main(){
 
     });
 }
+//Function to return the words in a more readable format
 function textTransform(word){
     if (word === "rock") return "Rock";
     if (word === "paper") return "Paper";
@@ -180,7 +181,7 @@ function textTransform(word){
     if (word === "lizard") return "Lizard";
     if (word === "spock") return "Spock";
 };
-
+//function to show the rules source in the README
 function showRules() {
    var element = document.getElementById("rulesPic");
    element.classList.toggle("hidden");
