@@ -4,7 +4,7 @@ Spock beats rock is an online game which is a geeky take on the classic "Rock Pa
 
 The aim of this app is to provide entertainment to the user in a simplistic and minimalistic design which does not overwhelm the senses and gives a chill user experience. Hopefully the entertainment this app provides will help users pass the time whenever they have a minute or two to spare. 
 
-![Responsive Design](/assets/images/response.png)
+![Responsive Design](assets/images/responsive.png)
 
 ## Features 
 
